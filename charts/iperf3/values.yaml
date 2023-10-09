@@ -14,3 +14,4 @@ deployment:
     repository: networkstatic/iperf3
     # adapt if you want to use a different tag
     tag: "latest"
+resources: {}
