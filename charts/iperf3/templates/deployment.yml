@@ -20,15 +20,15 @@ spec:
       containers:
         - name: iperf3
           image: {{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}
-          # command:
-          #  - iperf3
-          #  - -s
-          #  - -p 5201
-          #  - -i 1
-          #  - --forceflush
-          #  {{- if .Values.verbose }}
-          #  - -V
-            #{{- end }}
+          command:
+           - iperf3
+           - -s
+           - -p 5201
+           - -i 1
+           - --forceflush
+           {{- if .Values.verbose }}
+           - -V
+            {{- end }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           ports:
             - name: iperf3
