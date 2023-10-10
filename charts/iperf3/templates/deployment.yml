@@ -29,7 +29,7 @@ spec:
             {{- if .Values.verbose }}
             - -V
             {{- end }}
-          resources: {{ .Values.resources }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
           ports:
             - name: iperf3
               containerPort: 5201
