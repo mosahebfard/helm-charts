@@ -2,10 +2,10 @@ service:
   enabled: true
   # mandatory with enabled service. Will be the ip the LoadBalancer service binds to
   # externalIp:
-  type: NodePort
+  #type: NodePort
   # the port to bind on the service, if enabled.
   port: 5201
-  nodePort: 31000
+  #nodePort: 31000
 # set to true for verbose logging
 verbose: false
 # change this to set the number of replicas
