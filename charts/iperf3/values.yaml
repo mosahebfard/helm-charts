@@ -1,7 +1,7 @@
 service:
   enabled: true
   # mandatory with enabled service. Will be the ip the LoadBalancer service binds to
-  externalIp: 192.168.40.189
+  #externalIp: 192.168.40.189
   type: NodePort
   # the port to bind on the service, if enabled.
   port: 5201
