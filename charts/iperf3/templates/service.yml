@@ -5,7 +5,7 @@ kind: Service
 metadata:
   name: iperf3
 spec:
-  type: LoadBalancer
+  type: {{ .Values.service.type }}
 {{- if .Values.service.externalIp -}}
   externalIPs:
     - {{.Values.service.externalIp}}
@@ -17,4 +17,5 @@ spec:
     - protocol: TCP
       port: {{.Values.service.port}}
       targetPort: 40000
+      nodePort: {{ .Values.service.nodePort }}
 {{- end }}
