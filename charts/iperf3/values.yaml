@@ -5,8 +5,8 @@ service:
   #type: LoadBalancer
   type: NodePort
   # the port to bind on the service, if enabled.
-  port: 5555
-  nodePort: 31400
+  port: 5201
+  #nodePort: 31400
 # set to true for verbose logging
 verbose: false
 # change this to set the number of replicas
