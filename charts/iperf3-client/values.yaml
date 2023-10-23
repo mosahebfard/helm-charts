@@ -1,0 +1,21 @@
+service:
+  enabled: true
+  # mandatory with enabled service. Will be the ip the LoadBalancer service binds to
+  #externalIp: 192.168.40.189
+  #type: LoadBalancer
+  type: NodePort
+  # the port to bind on the service, if enabled.
+  #port: 5201
+  #nodePort: 31400
+# set to true for verbose logging
+verbose: false
+# change this to set the number of replicas
+replicas: 1
+deployment:
+  image:
+    # if needed you can use another image
+    #repository: networkstatic/iperf3
+    repository: nicolaka/netshoot
+    # adapt if you want to use a different tag
+    tag: "latest"
+resources: {}

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Chart.Name}}
+spec:
+  replicas: {{ .Values.replicas }}
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: iperf3_client
+      app.kubernetes.io/instance: {{.Release.Name}}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: iperf3_client
+        app.kubernetes.io/instance: {{.Release.Name}}
+    spec:
+      containers:
+        - name: iperf3_client
+          image: {{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}
+          command:
+           - iperf3
+           - -s
+           - -p 5202
+           - -i 1
+           - --forceflush
+           {{- if .Values.verbose }}
+           - -V
+            {{- end }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          ports:
+            - name: iperf3_client
+              containerPort: 5202
+              protocol: TCP
+      restartPolicy: Always
+status: {}
