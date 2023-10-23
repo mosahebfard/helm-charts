@@ -23,7 +23,7 @@ spec:
           command:
            - iperf3
            - -s
-           - -p 5202
+           - -p {{ .Values.iperf3.serverPort }}
            - -i 1
            - --forceflush
            {{- if .Values.verbose }}
@@ -32,7 +32,7 @@ spec:
           resources: {{- toYaml .Values.resources | nindent 12 }}
           ports:
             - name: iperf3_client
-              containerPort: 5202
+              containerPort: {{ .Values.iperf3.serverPort }}
               protocol: TCP
       restartPolicy: Always
 status: {}
