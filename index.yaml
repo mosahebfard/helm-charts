@@ -1,0 +1,37 @@
+apiVersion: v1
+entries:
+  iperf3:
+  - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2023-10-23T13:10:55.967699634+02:00"
+    description: IPerf3 server to benchmark kubernetes networking
+    digest: 8982e74b57f8b7558060ac54c8ca5f1e3508bae20e43299a72395998392bf079
+    home: https://iperf.fr/iperf-download.php
+    keywords:
+    - benchmark
+    - network
+    - tools
+    name: iperf3
+    sources:
+    - https://github.com/EugenMayer/helm-charts/tree/main/charts/iperf3
+    urls:
+    - https://mosahebfard.github.io/helm-charts/iperf3-0.2.1.tgz
+    version: 0.2.1
+  iperf3_client:
+  - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2023-10-23T13:10:55.967873504+02:00"
+    description: IPerf3 clientr to benchmark kubernetes networking
+    digest: adb0d8a2f4200ae26aac59b9b1219534b5433874f5351b5ed2d4baeec8e03e81
+    home: https://iperf.fr/iperf-download.php
+    keywords:
+    - benchmark
+    - network
+    - tools
+    name: iperf3_client
+    sources:
+    - https://github.com/EugenMayer/helm-charts/tree/main/charts/iperf3
+    urls:
+    - https://mosahebfard.github.io/helm-charts/iperf3_client-0.2.1.tgz
+    version: 0.2.1
+generated: "2023-10-23T13:10:55.96731712+02:00"
