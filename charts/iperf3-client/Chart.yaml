@@ -1,6 +1,6 @@
 apiVersion: v2
-description: IPerf3 server to benchmark kubernetes networking
-name: iperf3
+description: IPerf3 clientr to benchmark kubernetes networking
+name: iperf3_client
 home: https://iperf.fr/iperf-download.php
 version: 0.2.1
 appVersion: 3.0.0
