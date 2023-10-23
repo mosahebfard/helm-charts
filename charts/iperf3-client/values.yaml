@@ -5,7 +5,7 @@ service:
   #type: LoadBalancer
   type: NodePort
   # the port to bind on the service, if enabled.
-  #port: 5202
+  port: 5202
   #nodePort: 31500
 # set to true for verbose logging
 verbose: false
